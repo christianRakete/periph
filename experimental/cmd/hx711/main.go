@@ -10,11 +10,11 @@ import (
 	"os"
 	"time"
 
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/conn/physic"
-	"periph.io/x/periph/experimental/conn/gpio/gpioutil"
-	"periph.io/x/periph/experimental/devices/hx711"
-	"periph.io/x/periph/host"
+	"github.com/christianRakete/periph/conn/gpio/gpioreg"
+	"github.com/christianRakete/periph/conn/physic"
+	"github.com/christianRakete/periph/experimental/conn/gpio/gpioutil"
+	"github.com/christianRakete/periph/experimental/devices/hx711"
+	"github.com/christianRakete/periph/host"
 )
 
 const timeout = time.Second

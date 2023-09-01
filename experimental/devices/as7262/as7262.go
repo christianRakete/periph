@@ -13,10 +13,10 @@ import (
 	"sync"
 	"time"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/i2c"
-	"periph.io/x/periph/conn/physic"
+	"github.com/christianRakete/periph/conn"
+	"github.com/christianRakete/periph/conn/gpio"
+	"github.com/christianRakete/periph/conn/i2c"
+	"github.com/christianRakete/periph/conn/physic"
 )
 
 // Opts holds the configuration options.

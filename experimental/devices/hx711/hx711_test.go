@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpiotest"
-	"periph.io/x/periph/conn/pin"
-	"periph.io/x/periph/experimental/conn/analog"
+	"github.com/christianRakete/periph/conn/gpio"
+	"github.com/christianRakete/periph/conn/gpio/gpiotest"
+	"github.com/christianRakete/periph/conn/pin"
+	"github.com/christianRakete/periph/experimental/conn/analog"
 )
 
 func TestNew(t *testing.T) {

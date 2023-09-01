@@ -70,11 +70,11 @@ import (
 	"strings"
 	"time"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/gpio/gpiostream"
-	"periph.io/x/periph/conn/physic"
-	"periph.io/x/periph/host/pmem"
-	"periph.io/x/periph/host/videocore"
+	"github.com/christianRakete/periph"
+	"github.com/christianRakete/periph/conn/gpio/gpiostream"
+	"github.com/christianRakete/periph/conn/physic"
+	"github.com/christianRakete/periph/host/pmem"
+	"github.com/christianRakete/periph/host/videocore"
 )
 
 const (

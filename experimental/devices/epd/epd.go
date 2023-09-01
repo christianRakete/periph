@@ -12,14 +12,14 @@ import (
 	"image/draw"
 	"time"
 
-	"periph.io/x/periph/host/rpi"
+	"github.com/christianRakete/periph/host/rpi"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/display"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/physic"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/devices/ssd1306/image1bit"
+	"github.com/christianRakete/periph/conn"
+	"github.com/christianRakete/periph/conn/display"
+	"github.com/christianRakete/periph/conn/gpio"
+	"github.com/christianRakete/periph/conn/physic"
+	"github.com/christianRakete/periph/conn/spi"
+	"github.com/christianRakete/periph/devices/ssd1306/image1bit"
 )
 
 // EPD commands

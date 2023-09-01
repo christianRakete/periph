@@ -9,13 +9,13 @@ import (
 	"strconv"
 	"strings"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/conn/pin"
-	"periph.io/x/periph/conn/pin/pinreg"
-	"periph.io/x/periph/host/distro"
-	"periph.io/x/periph/host/sysfs"
+	"github.com/christianRakete/periph"
+	"github.com/christianRakete/periph/conn/gpio"
+	"github.com/christianRakete/periph/conn/gpio/gpioreg"
+	"github.com/christianRakete/periph/conn/pin"
+	"github.com/christianRakete/periph/conn/pin/pinreg"
+	"github.com/christianRakete/periph/host/distro"
+	"github.com/christianRakete/periph/host/sysfs"
 )
 
 // The J2 header is rPi compatible, except for the two analog pins and the 1.8V

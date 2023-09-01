@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"periph.io/x/periph/conn/physic"
-	"periph.io/x/periph/conn/pin"
+	"github.com/christianRakete/periph/conn/physic"
+	"github.com/christianRakete/periph/conn/pin"
 )
 
 func TestStrings(t *testing.T) {

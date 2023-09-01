@@ -16,13 +16,13 @@ package bone
 import (
 	"errors"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/pin"
-	"periph.io/x/periph/conn/pin/pinreg"
-	"periph.io/x/periph/host/beagle/black"
-	"periph.io/x/periph/host/beagle/green"
-	"periph.io/x/periph/host/sysfs"
+	"github.com/christianRakete/periph"
+	"github.com/christianRakete/periph/conn/gpio"
+	"github.com/christianRakete/periph/conn/pin"
+	"github.com/christianRakete/periph/conn/pin/pinreg"
+	"github.com/christianRakete/periph/host/beagle/black"
+	"github.com/christianRakete/periph/host/beagle/green"
+	"github.com/christianRakete/periph/host/sysfs"
 )
 
 // TODO(maruel): Use specialized am335x or pru implementation once available.

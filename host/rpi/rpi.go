@@ -11,12 +11,12 @@ import (
 	"fmt"
 	"os"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/pin"
-	"periph.io/x/periph/conn/pin/pinreg"
-	"periph.io/x/periph/host/bcm283x"
-	"periph.io/x/periph/host/distro"
+	"github.com/christianRakete/periph"
+	"github.com/christianRakete/periph/conn/gpio"
+	"github.com/christianRakete/periph/conn/pin"
+	"github.com/christianRakete/periph/conn/pin/pinreg"
+	"github.com/christianRakete/periph/host/bcm283x"
+	"github.com/christianRakete/periph/host/distro"
 )
 
 // Present returns true if running on a Raspberry Pi board.

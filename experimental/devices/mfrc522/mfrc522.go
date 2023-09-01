@@ -14,10 +14,10 @@ import (
 	"sync"
 	"time"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/experimental/devices/mfrc522/commands"
+	"github.com/christianRakete/periph/conn"
+	"github.com/christianRakete/periph/conn/gpio"
+	"github.com/christianRakete/periph/conn/spi"
+	"github.com/christianRakete/periph/experimental/devices/mfrc522/commands"
 )
 
 // Dev is an handle to an MFRC522 RFID reader.

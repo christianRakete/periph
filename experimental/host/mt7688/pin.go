@@ -8,10 +8,10 @@ import (
 	"errors"
 	"time"
 
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/physic"
-	"periph.io/x/periph/conn/pin"
-	"periph.io/x/periph/host/sysfs"
+	"github.com/christianRakete/periph/conn/gpio"
+	"github.com/christianRakete/periph/conn/physic"
+	"github.com/christianRakete/periph/conn/pin"
+	"github.com/christianRakete/periph/host/sysfs"
 )
 
 // function specifies the active functionality of a pin. The alternative

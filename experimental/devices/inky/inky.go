@@ -11,11 +11,11 @@ import (
 	"image/color"
 	"time"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/display"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/physic"
-	"periph.io/x/periph/conn/spi"
+	"github.com/christianRakete/periph/conn"
+	"github.com/christianRakete/periph/conn/display"
+	"github.com/christianRakete/periph/conn/gpio"
+	"github.com/christianRakete/periph/conn/physic"
+	"github.com/christianRakete/periph/conn/spi"
 )
 
 // Color is used to define which model of inky is being used, and also for

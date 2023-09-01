@@ -9,12 +9,12 @@ import (
 	"fmt"
 	"log"
 
-	"periph.io/x/periph/conn/i2c"
-	"periph.io/x/periph/conn/i2c/i2creg"
-	"periph.io/x/periph/conn/mmr"
-	"periph.io/x/periph/conn/onewire"
-	"periph.io/x/periph/conn/onewire/onewirereg"
-	"periph.io/x/periph/host"
+	"github.com/christianRakete/periph/conn/i2c"
+	"github.com/christianRakete/periph/conn/i2c/i2creg"
+	"github.com/christianRakete/periph/conn/mmr"
+	"github.com/christianRakete/periph/conn/onewire"
+	"github.com/christianRakete/periph/conn/onewire/onewirereg"
+	"github.com/christianRakete/periph/host"
 )
 
 func ExampleDev8() {

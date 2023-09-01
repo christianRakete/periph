@@ -10,10 +10,10 @@ import (
 	"log"
 	"strings"
 
-	"periph.io/x/periph/conn/physic"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/conn/spi/spireg"
-	"periph.io/x/periph/host"
+	"github.com/christianRakete/periph/conn/physic"
+	"github.com/christianRakete/periph/conn/spi"
+	"github.com/christianRakete/periph/conn/spi/spireg"
+	"github.com/christianRakete/periph/host"
 )
 
 func Example() {

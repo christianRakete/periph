@@ -4,7 +4,7 @@
 
 // Package uart defines the UART protocol.
 //
-// As described in https://periph.io/x/periph/conn#hdr-Concepts, periph.io uses
+// As described in https://github.com/christianRakete/periph/conn#hdr-Concepts, periph.io uses
 // the concepts of Bus, Port and Conn.
 //
 // In the package uart, 'Bus' is not exposed, as the protocol is primarily
@@ -29,9 +29,9 @@ import (
 	"fmt"
 	"io"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/physic"
+	"github.com/christianRakete/periph/conn"
+	"github.com/christianRakete/periph/conn/gpio"
+	"github.com/christianRakete/periph/conn/physic"
 )
 
 // Flow determines the data flow to use, if any.

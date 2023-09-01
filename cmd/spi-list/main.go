@@ -13,10 +13,10 @@ import (
 	"log"
 	"os"
 
-	"periph.io/x/periph/conn/pin"
-	"periph.io/x/periph/conn/pin/pinreg"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/conn/spi/spireg"
+	"github.com/christianRakete/periph/conn/pin"
+	"github.com/christianRakete/periph/conn/pin/pinreg"
+	"github.com/christianRakete/periph/conn/spi"
+	"github.com/christianRakete/periph/conn/spi/spireg"
 )
 
 func printPin(fn string, p pin.Pin) {

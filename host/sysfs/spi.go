@@ -17,14 +17,14 @@ import (
 	"sync"
 	"unsafe"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/conn/physic"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/conn/spi/spireg"
-	"periph.io/x/periph/host/fs"
+	"github.com/christianRakete/periph"
+	"github.com/christianRakete/periph/conn"
+	"github.com/christianRakete/periph/conn/gpio"
+	"github.com/christianRakete/periph/conn/gpio/gpioreg"
+	"github.com/christianRakete/periph/conn/physic"
+	"github.com/christianRakete/periph/conn/spi"
+	"github.com/christianRakete/periph/conn/spi/spireg"
+	"github.com/christianRakete/periph/host/fs"
 )
 
 // NewSPI opens a SPI port via its devfs interface as described at
@@ -36,7 +36,7 @@ import (
 // busNumber is the bus number as exported by devfs. For example if the path is
 // /dev/spidev0.1, busNumber should be 0 and chipSelect should be 1.
 //
-// It is recommended to use https://periph.io/x/periph/conn/spi/spireg#Open
+// It is recommended to use https://github.com/christianRakete/periph/conn/spi/spireg#Open
 // instead of using NewSPI() directly as the package sysfs is providing a
 // Linux-specific implementation. periph.io works on many OSes! This permits
 // it to work on all operating systems, or devices like SPI over USB.

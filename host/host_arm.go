@@ -6,15 +6,15 @@ package host
 
 import (
 	// Make sure CPU and board drivers are registered.
-	_ "periph.io/x/periph/host/allwinner"
-	_ "periph.io/x/periph/host/am335x"
-	_ "periph.io/x/periph/host/bcm283x"
-	_ "periph.io/x/periph/host/beagle/bone"
-	_ "periph.io/x/periph/host/beagle/green"
-	_ "periph.io/x/periph/host/chip"
-	_ "periph.io/x/periph/host/odroidc1"
+	_ "github.com/christianRakete/periph/host/allwinner"
+	_ "github.com/christianRakete/periph/host/am335x"
+	_ "github.com/christianRakete/periph/host/bcm283x"
+	_ "github.com/christianRakete/periph/host/beagle/bone"
+	_ "github.com/christianRakete/periph/host/beagle/green"
+	_ "github.com/christianRakete/periph/host/chip"
+	_ "github.com/christianRakete/periph/host/odroidc1"
 	// While this board is ARM64, it may run ARM 32 bits binaries so load it on
 	// 32 bits builds too.
-	_ "periph.io/x/periph/host/pine64"
-	_ "periph.io/x/periph/host/rpi"
+	_ "github.com/christianRakete/periph/host/pine64"
+	_ "github.com/christianRakete/periph/host/rpi"
 )

@@ -8,8 +8,8 @@ import (
 	"errors"
 	"strings"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/host/distro"
+	"github.com/christianRakete/periph"
+	"github.com/christianRakete/periph/host/distro"
 )
 
 // Present returns true if a TM AM335x processor is detected.

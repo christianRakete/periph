@@ -12,10 +12,10 @@ import (
 	"log"
 	"os"
 
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/conn/spi/spireg"
-	"periph.io/x/periph/experimental/devices/inky"
-	"periph.io/x/periph/host"
+	"github.com/christianRakete/periph/conn/gpio/gpioreg"
+	"github.com/christianRakete/periph/conn/spi/spireg"
+	"github.com/christianRakete/periph/experimental/devices/inky"
+	"github.com/christianRakete/periph/host"
 )
 
 var (

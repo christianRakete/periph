@@ -10,10 +10,10 @@ import (
 	"flag"
 	"fmt"
 
-	"periph.io/x/periph/conn/i2c/i2creg"
-	"periph.io/x/periph/conn/physic"
-	"periph.io/x/periph/experimental/devices/ina219"
-	"periph.io/x/periph/host"
+	"github.com/christianRakete/periph/conn/i2c/i2creg"
+	"github.com/christianRakete/periph/conn/physic"
+	"github.com/christianRakete/periph/experimental/devices/ina219"
+	"github.com/christianRakete/periph/host"
 )
 
 // SmokeTest is imported by periph-smoketest.

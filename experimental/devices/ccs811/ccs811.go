@@ -7,10 +7,10 @@ package ccs811
 import (
 	"fmt"
 
-	"periph.io/x/periph/conn/physic"
+	"github.com/christianRakete/periph/conn/physic"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/i2c"
+	"github.com/christianRakete/periph/conn"
+	"github.com/christianRakete/periph/conn/i2c"
 )
 
 // MeasurementMode represents different ways how data is read

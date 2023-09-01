@@ -10,9 +10,9 @@ import (
 	"fmt"
 	"sync"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/onewire"
-	"periph.io/x/periph/conn/onewire/onewirereg"
+	"github.com/christianRakete/periph"
+	"github.com/christianRakete/periph/conn/onewire"
+	"github.com/christianRakete/periph/conn/onewire/onewirereg"
 )
 
 // New opens a 1-wire bus via its netlink interface as described at

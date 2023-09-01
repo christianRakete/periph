@@ -9,10 +9,10 @@ import (
 	"fmt"
 	"time"
 
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/conn/physic"
-	gpiopin "periph.io/x/periph/conn/pin"
+	"github.com/christianRakete/periph/conn/gpio"
+	"github.com/christianRakete/periph/conn/gpio/gpioreg"
+	"github.com/christianRakete/periph/conn/physic"
+	gpiopin "github.com/christianRakete/periph/conn/pin"
 )
 
 const (

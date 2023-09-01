@@ -9,9 +9,9 @@ import (
 	"image/color"
 	"log"
 
-	"periph.io/x/periph/conn/spi/spireg"
-	"periph.io/x/periph/devices/apa102"
-	"periph.io/x/periph/host"
+	"github.com/christianRakete/periph/conn/spi/spireg"
+	"github.com/christianRakete/periph/devices/apa102"
+	"github.com/christianRakete/periph/host"
 )
 
 func Example() {

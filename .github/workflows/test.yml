@@ -40,7 +40,7 @@ jobs:
       run: git config --global core.autocrlf false
     - uses: actions/checkout@v2
       with:
-        path: src/periph.io/x/periph
+        path: src/github.com/christianRakete/periph
     - name: 'go version'
       run: go version
     - name: 'go env'
@@ -76,10 +76,10 @@ jobs:
       # Now run proper checks.
     - name: 'Check: go vet'
       if: always()
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: go vet ./...
     - name: 'Check: go vet shadow; shadowed variables'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       # TODO: Remove true if we make this check ever pass.
       run: |
         set +e
@@ -90,27 +90,27 @@ jobs:
         go vet -vettool=$SHADOW_TOOL ./... || true
     - name: 'Check: golint'
       if: always()
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       # TODO: Remove true if we make this check ever pass.
       run: golint -set_exit_status ./... || true
     - name: 'Check: inefficient variable assignment'
       if: always()
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: ineffassign .
     - name: 'Check: staticcheck'
       if: always()
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       # TODO: Remove true if we make this check ever pass.
       run: staticcheck ./... || true
     - name: 'Check: gosec (only G104)'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: gosec -include=G104 -fmt=golint -quiet ./...
 
       # The following checks are not dependent on the OS or go build tags. Only
       # run them on ubuntu-latest since it's the fastest one.
     - name: 'Check: no executable was committed (ubuntu)'
       if: always() && matrix.os == 'ubuntu-latest'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: |
         if find . -path '*.sh' -prune -o -path ./.git -prune -o -type f -executable -print | grep -e . ; then
           echo 'Do not commit executables beside shell scripts'
@@ -118,7 +118,7 @@ jobs:
         fi
     - name: 'Check: gofmt; code is well formatted (ubuntu)'
       if: always() && matrix.os == 'ubuntu-latest'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: |
         FILES=$(gofmt -s -l .)
         if ! test -z "$FILES"; then
@@ -136,11 +136,11 @@ jobs:
         fi
     - name: 'Check: addlicense; all sources have a license header (ubuntu)'
       if: always() && matrix.os == 'ubuntu-latest'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: addlicense -check .
     - name: "Check: misspelling; code doesn't contain misspelling (ubuntu)"
       if: always() && matrix.os == 'ubuntu-latest'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: |
         ERR=$(misspell .)
         if ! test -z "$ERR"; then
@@ -154,23 +154,23 @@ jobs:
 
       # Run tests last since it's potentially the slowest step.
     - name: 'Check: go test -cover'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: go test -timeout=40s -covermode=count -coverprofile coverage.txt ./...
       # Don't send code coverage if anything failed to reduce spam.
     - uses: codecov/codecov-action@v1
     - name: 'Cleanup'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: rm coverage.txt
       # Don't run go test -race if anything failed, to speed up the results.
     - name: 'Check: go test -race'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: go test -timeout=40s -race ./...
     - name: 'Check: go test -bench .'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: go test -timeout=40s -bench . -benchtime=100ms -cpu=1 ./...
 
     - name: "Check: tree is clean"
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: |
         # Nothing should have changed in the tree up to that point and no
         # unsuspected file was created.
@@ -183,7 +183,7 @@ jobs:
         fi
 
     - name: "Check: go generate doesn't modify files"
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: |
         go generate ./...
         # Also test for untracked files.
@@ -196,7 +196,7 @@ jobs:
 
     - name: 'Send comments'
       if: failure() && github.event_name == 'pull_request'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: |
         if [ -f _comments.txt ]; then
           URL=$(cat ${GITHUB_EVENT_PATH} | jq -r .pull_request.comments_url)
@@ -228,10 +228,10 @@ jobs:
         go-version: "${{matrix.gover}}"
     - uses: actions/checkout@v2
       with:
-        path: src/periph.io/x/periph
+        path: src/github.com/christianRakete/periph
     - name: 'Check: go get -d -t'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: go get -d -t ./...
     - name: 'Check: go test'
-      working-directory: src/periph.io/x/periph
+      working-directory: src/github.com/christianRakete/periph
       run: go test -timeout=40s ./...

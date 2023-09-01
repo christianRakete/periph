@@ -8,8 +8,8 @@ import (
 	"reflect"
 	"testing"
 
-	"periph.io/x/periph/conn/gpio/gpiostream"
-	"periph.io/x/periph/conn/physic"
+	"github.com/christianRakete/periph/conn/gpio/gpiostream"
+	"github.com/christianRakete/periph/conn/physic"
 )
 
 func TestRaster32Bits(t *testing.T) {

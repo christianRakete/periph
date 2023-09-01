@@ -5,7 +5,7 @@
 os: linux
 dist: bionic
 language: go
-go_import_path: periph.io/x/periph
+go_import_path: github.com/christianRakete/periph
 
 jobs:
   include:
@@ -17,26 +17,26 @@ jobs:
       #- $GOPATH/src/golang\.org
     before_script:
     - echo $TRAVIS_GO_VERSION
-    - go get -t -v periph.io/x/periph/...
+    - go get -t -v github.com/christianRakete/periph/...
     - >
       go get -u -v
       golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow
     script:
     - >
       echo 'Looking for external dependencies:';
-      go list -f '{{join .Imports "\n"}}' periph.io/x/periph/... | sort | uniq | grep -v ^periph.io/x/periph | xargs go list -f '{{if not .Standard}}- {{.ImportPath}}{{end}}'
+      go list -f '{{join .Imports "\n"}}' github.com/christianRakete/periph/... | sort | uniq | grep -v ^github.com/christianRakete/periph | xargs go list -f '{{if not .Standard}}- {{.ImportPath}}{{end}}'
     - >
       echo 'Erroring on external dependencies:';
-      ! go list -f '{{join .Imports "\n"}}' periph.io/x/periph/... | sort | uniq | grep -v ^periph.io/x/periph | xargs go list -f '{{if not .Standard}}Remove {{.ImportPath}}{{end}}' | grep -q Remove
+      ! go list -f '{{join .Imports "\n"}}' github.com/christianRakete/periph/... | sort | uniq | grep -v ^github.com/christianRakete/periph | xargs go list -f '{{if not .Standard}}Remove {{.ImportPath}}{{end}}' | grep -q Remove
     - >
       echo 'Erroring on /host depending on /devices:';
-      ! go list -f '{{.ImportPath}} depends on {{join .Imports ", "}}' periph.io/x/periph/host/... | sort | uniq | grep periph.io/x/periph/devices
+      ! go list -f '{{.ImportPath}} depends on {{join .Imports ", "}}' github.com/christianRakete/periph/host/... | sort | uniq | grep github.com/christianRakete/periph/devices
     - >
       echo 'Erroring on /conn depending on /devices:';
-      ! go list -f '{{.ImportPath}} depends on {{join .Imports ", "}}' periph.io/x/periph/conn/... | sort | uniq | grep periph.io/x/periph/devices
+      ! go list -f '{{.ImportPath}} depends on {{join .Imports ", "}}' github.com/christianRakete/periph/conn/... | sort | uniq | grep github.com/christianRakete/periph/devices
     - >
       echo 'Erroring on /conn depending on /host:';
-      ! go list -f '{{.ImportPath}} depends on {{join .Imports ", "}}' periph.io/x/periph/conn/... | sort | uniq | grep periph.io/x/periph/host
+      ! go list -f '{{.ImportPath}} depends on {{join .Imports ", "}}' github.com/christianRakete/periph/conn/... | sort | uniq | grep github.com/christianRakete/periph/host
     - >
       echo 'Erroring on shadowed variables:';
       ! go vet -vettool=$(which shadow) ./... |& grep -v '"err"' | grep -e '^[^#]'
